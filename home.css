@@ -1,0 +1,60 @@
+.headerDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 70px;
+}
+
+.headNameDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.headContentDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  align-items: center;
+  padding-right: 5%;
+}
+
+.bodyDiv {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 70px;
+  padding-right: 5%;
+}
+
+.introDiv {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0px;
+  gap: 20px;
+}
+
+.sectionBodyDiv {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+  padding: 30px 40px;
+  gap: 0px;
+  
+}
+
+.expandDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.projectDivContents {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projectDivEle{
+    padding: 30px 20px;
+}
