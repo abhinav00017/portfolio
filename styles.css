@@ -4,6 +4,7 @@ body {
     font-family: 'Inter', sans-serif;
     text-align: justify;
     margin-bottom: 50px;
+    
 }
 
 .color-1 {
@@ -16,6 +17,10 @@ body {
 
 .bg-2 {
     background-color: #0A0A0A;
+}
+
+.bg-3 {
+    background-color: #3C3C3C;
 }
 
 .fontsize-1 {
@@ -36,6 +41,10 @@ body {
 
 .fontsize-5 {
     font-size: 20px;
+}
+
+.fontsize-6 {
+    font-size: 25px;
 }
 
 .italic-1 {

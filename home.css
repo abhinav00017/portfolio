@@ -1,8 +1,12 @@
 .headerDiv {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
   padding: 20px 70px;
+  box-sizing: border-box; 
 }
 
 .headNameDiv {
@@ -13,16 +17,19 @@
 .headContentDiv {
   display: flex;
   flex-direction: row;
-  gap: 70px;
+  gap: 70px; /* Adjust gap to ensure content fits within the screen */
   align-items: center;
-  padding-right: 5%;
+  margin-left: auto; /* Pushes the headContentDiv to the rightmost side */
+  padding-right: 20px;
 }
+
 
 .bodyDiv {
   display: flex;
   flex-direction: column;
   padding: 0px 70px;
   padding-right: 5%;
+  gap: 20px;
 }
 
 .introDiv {
@@ -57,4 +64,57 @@
 
 .projectDivEle{
     padding: 30px 20px;
+}
+
+.educationDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.educationDivContents{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.educationDivContent{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+}
+
+.educationDivEleHead {
+    /* padding: 30px 15% 30px 5%; */
+    /* padding: 30px 0% 30px 5%; */
+    padding: 20px 0% 20px 3%;
+    justify-content: center;
+    height: 100px;
+    width: 200px;
+}
+
+.educationDivEleClg{
+    /* padding: 30px; */
+    padding: 30px 10% 30px 10%;
+    justify-content: center;
+    height: 100px;
+    width: 300px;
+}
+
+.educationDivEleMarks {
+    /* justify-content: flex-end; */
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    height: 100px;
+    width: 200px;
+    margin-left: auto;
+    padding: 20px 5% 20px 0%;
+}
+
+.edcationDivMarksBox {
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+     
 }
