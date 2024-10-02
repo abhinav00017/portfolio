@@ -1,10 +1,10 @@
 .headerDiv {
   display: flex;
   flex-direction: row;
-  position: fixed;
+  /* position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 100; */  
   padding: 20px 70px;
   box-sizing: border-box; 
 }
@@ -117,4 +117,146 @@
     border: 1px solid black;
     border-radius: 10px;
      
+}
+
+.skillsDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skillsDivContents{
+    margin: 0px 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+.skillContent{
+    gap: 20px;
+    height: 200px;
+    width: 100%;
+    padding: 2% 3%;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.skillContentName{
+  gap: 30px;
+  width: 80px;
+}
+
+.skillContentLevel {
+  flex: 1;
+  display: flex;
+  padding: 0px 0px 0px 7%;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillLevelBox {
+  width: 100%;
+  height: 7px;
+  background: #181717;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skillLevelBox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #fff45a;
+  width: calc(var(--level) * 20%);
+}
+
+.skillLevelBox[data-level="1"]::before {
+  --level: 1;
+}
+
+.skillLevelBox[data-level="2"]::before {
+  --level: 2;
+}
+
+.skillLevelBox[data-level="3"]::before {
+  --level: 3;
+}
+
+.skillLevelBox[data-level="4"]::before {
+  --level: 4;
+}
+
+.skillLevelBox[data-level="5"]::before {
+  --level: 5;
+}
+
+.contactAndProfileDiv {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.contactDiv{
+  width: 100%;
+  height: 400px;
+}
+
+.profileDiv{
+  width: 100%;
+  height: 400px;
+}
+
+.contactDivContents{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center ;
+  align-items: center;
+}
+
+.contactDivContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  padding: 30px 50px;
+}
+
+.contactDivBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 10px 10px;
+  background-color: rgb(79, 153, 82);
+  border-radius: 10px;
+  /* color: black; */
+}
+
+.profileDivContents{
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  padding: 0px 30px;
+  margin-top: 20px;
+
+}
+
+.profileDivContent{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profileImg{
+  display: flex;
+  gap: 20px;
+}
+
+.profileName{
+  display: flex;
+  align-items: center;
 }

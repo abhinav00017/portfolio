@@ -16,11 +16,27 @@ body {
 }
 
 .bg-2 {
-    background-color: #0A0A0A;
+    background-color: #171717;
 }
 
 .bg-3 {
     background-color: #3C3C3C;
+}
+
+.bg-4 {
+    background-color: #773D3D;
+}
+
+.bg-5 {
+    background-color: #6B8754;
+}
+
+.bg-6 {
+    background-color: #416478;
+}
+
+.bg-7 {
+    background-color: #6B407A;
 }
 
 .fontsize-1 {
@@ -76,7 +92,15 @@ body {
     display: flex;
     flex-direction: row;
     gap: 10px;
+    
 }
+
+@media (max-width: 768px) {
+    .makerow {
+        flex-wrap: wrap;
+    }
+}
+
 
 .makecolumn {
     display: flex;
