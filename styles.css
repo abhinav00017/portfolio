@@ -11,6 +11,20 @@ body {
     color: white;
 }
 
+.link-1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-1 {
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    width: fit-content;
+}
+
 .bg-1 {
     background-color: black;
 }
@@ -63,8 +77,16 @@ body {
     font-size: 25px;
 }
 
+.fontsize-7 {
+    font-size: 13px;
+}
+
 .italic-1 {
     font-style: italic;
+}
+
+.bold-1 {
+    font-weight: bold;
 }
 
 .border-1 {

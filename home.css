@@ -1,10 +1,10 @@
 .headerDiv {
   display: flex;
   flex-direction: row;
-  /* position: fixed;
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100; */  
+  z-index: 100; 
   padding: 20px 70px;
   box-sizing: border-box; 
 }
@@ -23,13 +23,112 @@
   padding-right: 20px;
 }
 
+.menu-toggle{
+  display: none;
+}
 
 .bodyDiv {
   display: flex;
   flex-direction: column;
   padding: 0px 70px;
   padding-right: 5%;
+  gap: 40px;
+  margin-top: 100px;
+}
+
+.section {
+  padding-top: 0px;
+}
+
+.aboutResumeDownloadBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
+}
+
+.aboutResumeViewBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Styles for mobile version */
+@media (max-width: 768px) {
+  .headerDiv {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .headContentDiv {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .headContentDiv a {
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .headerDiv.active .headContentDiv {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: auto;
+  }
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-height: 80%;
+  overflow: auto;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.resume-iframe {
+  width: 100%;
+  height: 80%;
+  border: none;
 }
 
 .introDiv {
@@ -48,11 +147,33 @@
   
 }
 
+.experienceDivMoreInfo {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.experienceDivMoreInfo span::before {
+  content: '•';
+  position:initial;
+  padding-right: 3%;
+}
+
+
 .expandDiv{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin-top: 20px;
+}
+
+.collapseDiv{
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 20px;
 }
 
 .projectDivContents {
@@ -237,10 +358,10 @@
 
 .profileDivContents{
   display: flex;
-  height: 100%;
+  height: 90%;
   justify-content: center;
   padding: 0px 30px;
-  margin-top: 20px;
+  margin-top: 0px;
 
 }
 
@@ -256,7 +377,58 @@
   gap: 20px;
 }
 
+.profilePic {
+  width: 50px;
+  height: 50px;
+}
+
+.profilePic svg{
+  fill: aliceblue;
+}
+
 .profileName{
   display: flex;
   align-items: center;
+}
+
+.tickMark {
+  display: none;
+  margin-left: 10px;
+}
+
+.profileCopySVG {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.footer {
+  background-color: #333; 
+  color: white; 
+  padding: 20px 0; 
+  text-align: center; 
+  position: relative; 
+  width: 100%; 
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerText {
+  margin-bottom: 10px; 
+}
+
+@media (max-width: 768px) {
+  .footer {
+      padding: 10px 0;
+  }
+
+  .footerText {
+      margin-bottom: 5px;
+  }
 }
