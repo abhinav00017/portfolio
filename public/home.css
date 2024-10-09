@@ -7,6 +7,11 @@
   z-index: 100; 
   padding: 20px 70px;
   box-sizing: border-box; 
+  transition: background-color 0.3s ease;
+}
+
+.headerDiv:hover {
+  background-color: #2a2a2a;
 }
 
 .headNameDiv {
@@ -22,6 +27,15 @@
   margin-left: auto; /* Pushes the headContentDiv to the rightmost side */
   padding-right: 20px;
 }
+
+.headContentDiv a {
+  transition: color 0.3s ease;
+}
+
+.headContentDiv a:hover {
+  color: #fff45a;
+}
+
 
 .menu-toggle{
   display: none;
@@ -163,6 +177,7 @@
   gap: 10px;
   padding-top: 20px;
   padding-left: 10px;
+  animation: fadeIn 0.5s ease-out;
 }
 
 .experienceDivMoreInfo span::before {
@@ -184,6 +199,15 @@
   flex-direction: column;
   align-items: flex-end;
   margin-top: 20px;
+}
+
+.projectDiv {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectDiv:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
 }
 
 .projectDivContents {
@@ -301,6 +325,7 @@
   height: 100%;
   background: #fff45a;
   width: calc(var(--level) * 20%);
+  /* transition: width 1s ease-out; */
 }
 
 .skillLevelBox[data-level="1"]::before {
@@ -363,7 +388,12 @@
   padding: 10px 10px;
   background-color: rgb(79, 153, 82);
   border-radius: 10px;
+  transition: background-color 0.3s ease;
   /* color: black; */
+}
+
+.contactDivBtn:hover {
+  background-color: rgb(99, 173, 102);
 }
 
 .profileDivContents{
@@ -410,7 +440,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease;
 }
+
+/* .profileCopySVG:hover {
+  transform: scale(1.1);
+} */
+
+/* @keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+} */
 
 
 .footer {

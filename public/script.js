@@ -1,5 +1,83 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    const cursor = document.createElement('div');
+    cursor.classList.add('cursor');
+    document.body.appendChild(cursor);
+
+    const cursorTrail = document.createElement('div');
+    cursorTrail.classList.add('cursor-trail');
+    document.body.appendChild(cursorTrail);
+
+    document.body.classList.add('custom-cursor');
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let trailX = 0;
+    let trailY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animate() {
+        let distX = mouseX - trailX;
+        let distY = mouseY - trailY;
+        
+        trailX += distX * 0.1;
+        trailY += distY * 0.1;
+
+        cursor.style.left = mouseX + 'px';
+        cursor.style.top = mouseY + 'px';
+
+        cursorTrail.style.left = trailX + 'px';
+        cursorTrail.style.top = trailY + 'px';
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Function to handle scroll animations
+    function handleScrollAnimations() {
+        document.querySelectorAll('.animate__animated').forEach(function(element) {
+            if (isInViewport(element) && !element.classList.contains('animate__fadeInUp')) {
+                element.classList.add('animate__fadeInUp');
+            }
+        });
+    }
+
+//    Initial check for elements in viewport
+    // handleScrollAnimations();
+
+    // // Listen for scroll events
+    // window.addEventListener('scroll', handleScrollAnimations);
+
+    // // Animate skill levels when they come into view
+    // const skillLevels = document.querySelectorAll('.skillLevelBox');
+    // const observer = new IntersectionObserver((entries) => {
+    //     entries.forEach(entry => {
+    //         if (entry.isIntersecting) {
+    //             entry.target.style.animation = 'fillSkill 1s ease-out forwards';
+    //         }
+    //     });
+    // }, { threshold: 0.5 });
+
+    // skillLevels.forEach(skill => observer.observe(skill));
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     var headerDiv = document.querySelector('.headerDiv');
     var menuToggle = document.querySelector('.menu-toggle');
 
